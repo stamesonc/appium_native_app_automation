@@ -1,3 +1,4 @@
+import core.ConfigReader;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -18,9 +19,9 @@ public class AndroidDemo {
 
         File apkAppFile = new File("src/test/java/apps/ApiDemos.apk");
 
-        caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "pixel_4_28");
-        caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UIAutomator2");
+        caps.setCapability(MobileCapabilityType.PLATFORM_NAME, ConfigReader.getProperty("platformName"));
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME, ConfigReader.getProperty("deviceName"));
+        //caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UIAutomator2");
         caps.setCapability(MobileCapabilityType.APP, apkAppFile.getAbsolutePath());
 
         URL appiumURL;
