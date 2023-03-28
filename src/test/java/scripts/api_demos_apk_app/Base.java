@@ -4,7 +4,7 @@ import core.Driver;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.api_demos_pages.APIDemosLandingPage;
 import pages.api_demos_pages.APIDemosPreferenceDependenciesPage;
@@ -23,7 +23,7 @@ public class Base {
         driver = Driver.getDriver();
     }
 
-    @AfterTest
+    @AfterMethod
     public void teardown(){
         Driver.quitDriver();
     }
