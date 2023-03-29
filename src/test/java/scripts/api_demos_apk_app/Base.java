@@ -6,9 +6,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.api_demos_pages.APIDemosLandingPage;
-import pages.api_demos_pages.APIDemosPreferenceDependenciesPage;
-import pages.api_demos_pages.APIDemosPreferencePage;
+import pages.api_demos_pages.*;
 
 
 public class Base {
@@ -17,6 +15,11 @@ public class Base {
     APIDemosLandingPage apiDemosLandingPage;
     APIDemosPreferencePage apiDemosPreferencePage;
     APIDemosPreferenceDependenciesPage apiDemosPreferenceDependenciesPage;
+    APIDemosAccessibilityPage apiDemosAccessibilityPage;
+    APIDemosViewsPage apiDemosViewsPage;
+    APIDemosAnimationPage apiDemosAnimationPage;
+    APIDemosShakePage apiDemosShakePage;
+
 
     @BeforeMethod
     public void setDriver(){
